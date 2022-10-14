@@ -12,9 +12,11 @@
 	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
 
 	<script>
-		function buttonClicked() {
-		  document.getElementById("buttonclick").innerHTML = "The button was clicked.";
-		}
+		function print_stuff()
+		{
+			var x = document.getElementById('email').value
+			alert(x);
+		}		}
 	</script>
 </head>
 
@@ -147,8 +149,8 @@
 				</div>
 				<div class="lowerfooter">
 					<form>
-						<input class="email" type="text" placeholder="Email Address">
-						<input type="button" value="Sign Up" id="buttonclick" onclick="buttonClicked()">
+						<input type="text" id="email" placeholder="Email Address">
+						<input type="button" onclick="print_stuff" value="Sign Up">
 					</form>
 					<div class="copyright">
 						<!-- copyright -->
