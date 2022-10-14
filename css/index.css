@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	/*border: 0;                    FIX THIS AT THE END*/
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -47,12 +47,10 @@ table {
 	border-spacing: 0;
 }
 
-
-/* GENERAL STYLES*/
 * {
     box-sizing: border-box;
-    border:1px solid blue;
-
+    color: rgb(225, 239, 230);
+    border: 1px solid yellow
 }
 
 html {
@@ -68,7 +66,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
-    color: rgb(225, 239, 230);
     text-decoration: none;
 }
 
@@ -97,44 +94,40 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    
 }
-
-.page_top
+header div
 {
     background-color: rgb(0, 4, 17, .8);
 }
-
-nav
+header nav
 {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+}
+.links
+{
+    display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
-
-nav .menubox
+.linkbox
 {
-    width: 20%;
-    height: 50px;
-    color: rgb(225, 239, 230);
-    text-decoration: none;
     font-size: 2rem;
-
+    width:20%;
 }
 
-.socialMedia-container
+/* ************************* SOCIAL MEDIA CONTIANER ************************** */
+.socialmedia
 {
-    width: 100vw;
-    display:flex;
-    justify-content: center;
+
 }
 
-.socialMedia-container .smbox
+/* ************************* SOCIAL MEDIA ITEMS ************************** */
+.fa-brands
 {
-    margin: 1% 2%;
-    height:30px;
-    width:30px;
+    margin: 15px;
 }
-
 
 
 
@@ -156,20 +149,22 @@ nav .menubox
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
-}
-.food
-{
-    padding: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    padding: 40px 200px;
 }
 
-.food img
+.food-container
 {
-    height: 50%;
-    flex-shrink: 6;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.food-item
+{
+    margin: 20px 20px;
+    width: 350px;
 }
 
 /* about us section */
@@ -198,6 +193,11 @@ nav .menubox
 
 .about-container .text {
     width: 50%;
+}
+
+.about p
+{
+    font-size: 2rem;
 }
 
 /* contact us section */
@@ -257,45 +257,170 @@ footer {
 
 }
 
-footer nav
+footer div
 {
-    display: flex;
     text-align: center;
-    justify-content: space-evenly;
 }
 
-footer form
+.text
 {
-    width: 25%;
-    text-align: left;
+    width: 30%;
+    font-size: 2rem;
 }
+
+.lowerfooter
+{
+    display:flex;
+    align-items: baseline;
+}
+
+form
+{
+    width: 30%;
+}
+
+form input
+{
+    color: black;
+    font-weight: bold;
+    font-size:1.5rem;
+    height: 30px;
+}
+
+.copyright
+{
+    width:70%;
+    text-align: center;
+}
+
+.copyright p
+{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* mobile media query */
-@media (max-width: 428px) {
-    /* header section */
+@media (max-width: 428px) 
+{
+    h1 {
+        font-size: 4rem;
+    }
     
+    h2 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    
+    p, a {
+        font-size: 1rem;
+    }
+    
+    /* header section */
+    header {
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/home-header.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        
+    }
+    header div
+    {
+        padding:5%;
+        background-color: rgb(0, 4, 17, .8);
+    }
+    header nav
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .links
+    {
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        width: 100%;
+    }
+    .linkbox
+    {
+        font-size: 2rem;
+        width:50%;
+    }
 
     /* gallery section */
-    .gallery {
-        height: auto;
+    .gallery 
+    {
+        padding: 10px 10px;
+    }
+    
+    .gallery div
+    {
+    }
+    .food-container
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .food-item
+    {
+        width: 35%;
+        margin: 20px 20px;
+    
     }
     
     /* about us section */
 
     .about {
-        height: 200vh;
+        /*height: 200vh;*/
+        height: auto;
     }
     
     .about h2 {
         width: 100%;
         padding-top: 5vh;
     }
+
+    .about p
+    {
+        font-size: 1.5rem;
+    }
     
     .about-container .text {
         width: 85%;
     }
     
+    /* spacers */
+    .spacer {
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(0, 4, 17);
+    }
+    .spacer-sm {
+        width: 100%;
+        height: 5vh;
+        background-color: rgb(0, 4, 17);
+    }
+
+
+
     /* contact us section */
     .contact h3 {
         padding-top: 2.5vh;
@@ -325,4 +450,36 @@ footer form
         padding-top: 2.5vh;
         font-size: 2rem;
     }
+
+    .lowerfooter
+    {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form
+    {
+        width: auto;
+    }
+    
+    form input
+    {
+        color: black;
+        font-weight: bold;
+        font-size:1.5rem;
+        height: 30px;
+    }
+    
+    .copyright
+    {
+        width:70%;
+        text-align: center;
+    }
+    
+    .copyright p
+    {
+        font-size: .9rem;
+    }
+
 }

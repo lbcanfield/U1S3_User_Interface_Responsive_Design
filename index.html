@@ -10,52 +10,51 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
+
+	<script>
+		function buttonClicked() {
+		  document.getElementById("buttonclick").innerHTML = "The button was clicked.";
+		}
+	</script>
 </head>
 
 <body>
-	<div>
+	<!--<div>		not sure if this div is necessary-->
 		<!-- header -->
 		<header>
-			<div class="page_top">
-				<div>
-					<h1><a href="index.html">BLOOMTECH BAR AND GRILL</a></h1>
-					<!-- nav -->
-					<nav>
-						<a href="menu.html" class="menubox">Menu</a>
-						<a href="#" class="menubox">Reservations</a>
-						<a href="#" class="menubox">Special Offers</a>
-						<a href="#contact" class="menubox">Contact</a>
-						<div class="socialMedia-container">
-							<div class="smbox">
-								<i class="fa-brands fa-square-facebook" name="facebook"></i>
-							</div>
-							<div class="smbox">
-								<i class="fa-brands fa-square-twitter name=twitter"></i>
-							</div>
-							<div class="smbox">
-								<i class="fa-brands fa-instagram" name="instagram"></i>
-							</div>
-						</div>
-					</nav>
-				</div>
+			<div>
+				<a href="index.html"><h1>BLOOMTECH BAR AND GRILL</h1></a>
+				<!-- nav -->
+				<nav>
+					<div class="links">
+						<a href="menu.html" class="linkbox">Menu</a>
+						<a href="#" class="linkbox">Reservations</a>
+						<a href="#" class="linkbox">Special Offers</a>
+						<a href="#contact" class="linkbox">Contact</a>
+					</div>
+					<div class="socialmedia">
+						<i class="fa-brands fa-square-facebook fa-3x"></i>
+						<i class="fa-brands fa-twitter fa-3x"></i>
+						<i class="fa-brands fa-instagram fa-3x"></i>
+					</div>
+				</nav>
 			</div>
 		</header>
-	</div>
 
 		<!-- gallery section -->
 		<section class="gallery">
 			<div>
 				<h2>OUR FOOD</h2>
-				<div class="food">
-					<img class="foodbox" src="img/food-avocadotoast.jpg" alt="picture of avacado toast">
-					<img class="foodbox" src="img/food-burger.jpg" alt="picture of a burger">
-					<img class="foodbox" src="img/food-poutine.jpg" alt="picture of poutine">
-					<img class="foodbox" src="img/food-ribs.jpg" alt="picture of ribs">
-					<img class="foodbox" src="img/food-sandwich.jpg" alt="picture of a sandwich">
-					<img class="foodbox" src="img/food-sausage.jpg" alt="picture of sausage">
-					<img class="foodbox" src="img/food-steak.jpg" alt="picture of steak">
-					<img class="foodbox" src="img/food-tacos.jpg" alt="picture of tacos">
-					<img class="foodbox" src="img/food-wings.jpg" alt="picture of wings">
+				<div class="food-container">
+					<img src="img/food-avocadotoast.jpg" alt="picture of avacado toast" class="food-item">
+					<img src="img/food-burger.jpg" alt="picture of a burger" class="food-item">
+					<img src="img/food-poutine.jpg" alt="picture of poutine" class="food-item">
+					<img src="img/food-ribs.jpg" alt="picture of ribs" class="food-item">
+					<img src="img/food-sandwich.jpg" alt="picture of sandwich" class="food-item">
+					<img src="img/food-sausage.jpg" alt="picture of sausage" class="food-item">
+					<img src="img/food-steak.jpg" alt="picture of steak" class="food-item">
+					<img src="img/food-tacos.jpg" alt="picture of tacos" class="food-item">
+					<img src="img/food-wings.jpg" alt="picture of wings" class="food-item">
 				</div>
 			</div>
 		</section>
@@ -135,23 +134,31 @@
 		<footer>
 			<nav>
 				<!-- email signup -->
-				<h4>Join our mailing list!</h4>
-
-
-				<a href="menu.html" class="menubox">Menu</a>
-				<a href="#" class="menubox">Reservations</a>
-				<a href="#" class="menubox">Special Offers</a>
-				<a href="#contact" class="menubox">Contact</a>
-				<form>
-					<input type="text" placeholder='Email Address'>
-					<input type="button" value="Sign Up">
-				</form>
+				<div class="links">
+					<div class="text">
+						<h4>Join our mailing list!</h4>
+					</div>
+					<div class="links">
+						<a href="menu.html" class="linkbox">Menu</a>
+						<a href="#" class="linkbox">Reservations</a>
+						<a href="#" class="linkbox">Special Offers</a>
+						<a href="#contact" class="linkbox">Contact</a>
+					</div>
+				</div>
+				<div class="lowerfooter">
+					<form>
+						<input class="email" type="text" placeholder="Email Address">
+						<input type="button" value="Sign Up" id="buttonclick" onclick="buttonClicked()">
+					</form>
+					<div class="copyright">
+						<!-- copyright -->
+						<p>©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.</p>
+					</div>			
+				</div>
 				<!-- nav -->
-				<!-- copyright -->
-				<div>©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.</div>
 			</nav>
-
 		</footer>
+	<!--</div>		not sure if this div is nessary -->
 </body>
 
 </html>
