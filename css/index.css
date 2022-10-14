@@ -106,16 +106,15 @@ header {
 
 nav
 {
-    display:flex;
-    flex-direction: column;
-}
-.links
-{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
-.links .menubox
+
+nav .menubox
 {
+    width: 20%;
+    height: 50px;
     color: rgb(225, 239, 230);
     text-decoration: none;
     font-size: 2rem;
@@ -124,6 +123,7 @@ nav
 
 .socialMedia-container
 {
+    width: 100vw;
     display:flex;
     justify-content: center;
 }
@@ -156,23 +156,20 @@ nav
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
-    display: flex;
 }
-
 .food
 {
-    margin 100px;
+    padding: 50px;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
-.foodbox
+.food img
 {
-    padding: 10px;
-    margin: 20px;
-    width: 400px;
-    
+    height: 50%;
+    flex-shrink: 6;
 }
 
 /* about us section */
@@ -256,13 +253,23 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+
 }
 
-.page_bottom
+footer nav
 {
-    background-color: rgb(0, 4, 17);
-    color:rgb(225, 239, 230);
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
+
+footer form
+{
+    width: 25%;
+    text-align: left;
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
