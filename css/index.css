@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/*border: 0;                    FIX THIS AT THE END*/
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -47,8 +47,12 @@ table {
 	border-spacing: 0;
 }
 
+
+/* GENERAL STYLES*/
 * {
     box-sizing: border-box;
+    border:1px solid blue;
+
 }
 
 html {
@@ -64,6 +68,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
+    color: rgb(225, 239, 230);
     text-decoration: none;
 }
 
@@ -91,7 +96,47 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
+
+.page_top
+{
+    background-color: rgb(0, 4, 17, .8);
+}
+
+nav
+{
+    display:flex;
+    flex-direction: column;
+}
+.links
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.links .menubox
+{
+    color: rgb(225, 239, 230);
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.socialMedia-container
+{
+    display:flex;
+    justify-content: center;
+}
+
+.socialMedia-container .smbox
+{
+    margin: 1% 2%;
+    height:30px;
+    width:30px;
+}
+
+
+
 
 /* spacers */
 .spacer {
@@ -111,6 +156,23 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    display: flex;
+}
+
+.food
+{
+    margin 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.foodbox
+{
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    
 }
 
 /* about us section */
@@ -194,6 +256,12 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+}
+
+.page_bottom
+{
+    background-color: rgb(0, 4, 17);
+    color:rgb(225, 239, 230);
 }
 
 /* mobile media query */
